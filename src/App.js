@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import './styles.css'
-import { Link, Route, Routes } from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
+import { useEffect, useState } from "react";
+import "./styles.css";
+import { Link, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import PersonProfile from "./pages/PersonProfile";
 
 export default function App() {
-  const [hiredPeople, setHiredPeople] = useState([])
+  const [hiredPeople, setHiredPeople] = useState([]);
 
   return (
     <>
@@ -19,8 +20,9 @@ export default function App() {
         </nav>
       </header>
       <Routes>
+        <Route path="/profile/:username/" element={<PersonProfile />} />
         <Route path="/" element={<Dashboard />} />
       </Routes>
     </>
-  )
+  );
 }
