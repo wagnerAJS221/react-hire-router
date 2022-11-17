@@ -3,6 +3,8 @@ import PeopleListItem from "./PeopleListItem";
 function PeopleList(props) {
   const { people } = props;
 
+  console.log("people inside peopleList: ", people);
+
   return (
     <ul>
       {people

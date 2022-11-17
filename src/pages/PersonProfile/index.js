@@ -8,10 +8,10 @@ function PersonProfile(props) {
   const location = useLocation();
 
   useEffect(() => {
-    // console.log(location.state.person);
     setPerson(location.state.person);
   }, [location]);
 
+  console.log("Something");
   if (!person) return <p>Loading...</p>;
 
   return (

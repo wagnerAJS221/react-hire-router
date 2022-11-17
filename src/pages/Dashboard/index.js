@@ -7,11 +7,12 @@ function Dashboard(props) {
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=5")
+    fetch("https://randomuser.me/api/?seed=myseed&results=5")
       .then((res) => res.json())
       .then((data) => setPeople(data.results));
-    console.log(people);
   }, []);
+
+  console.log("Inside dashboard people is: ", people);
 
   return (
     <main className="dashboard-layout">
