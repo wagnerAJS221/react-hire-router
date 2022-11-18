@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 import { Link, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
@@ -20,7 +20,15 @@ export default function App() {
         </nav>
       </header>
       <Routes>
-        <Route path="/profile/:username/" element={<PersonProfile />} />
+        <Route
+          path="/profile/:username/"
+          element={
+            <PersonProfile
+              hiredPeople={hiredPeople}
+              setHiredPeople={setHiredPeople}
+            />
+          }
+        />
         <Route path="/" element={<Dashboard />} />
       </Routes>
     </>

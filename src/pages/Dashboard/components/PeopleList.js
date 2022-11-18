@@ -1,9 +1,9 @@
 import PeopleListItem from "./PeopleListItem";
 
 function PeopleList(props) {
+  // props: either people or hiredPeople
   const { people } = props;
-
-  console.log("people inside peopleList: ", people);
+  console.log(props);
 
   return (
     <ul>
