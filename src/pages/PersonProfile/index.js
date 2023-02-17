@@ -8,10 +8,11 @@ function PersonProfile({ hiredPeople, setHiredPeople }) {
   const location = useLocation()
 
   useEffect(() => {
-    setPerson(location.state.person)
+    if (location.state) {
+      setPerson(location.state.person)
+    }
   }, [location])
 
-  console.log('Something')
   if (!person) return <p>Loading...</p>
 
   return (
@@ -19,7 +20,11 @@ function PersonProfile({ hiredPeople, setHiredPeople }) {
       <h2>
         {person.name.first} {person.name.last}
       </h2>
-      <HireForm person={person} setHiredPeople={setHiredPeople} />
+      <HireForm
+        person={person}
+        hiredPeople={hiredPeople}
+        setHiredPeople={setHiredPeople}
+      />
     </article>
   )
 }

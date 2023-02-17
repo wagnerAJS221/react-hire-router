@@ -12,8 +12,6 @@ function Dashboard(props) {
       .then((data) => setPeople(data.results))
   }, [])
 
-  console.log('Inside dashboard people is: ', people)
-
   return (
     <main className="dashboard-layout">
       <section>

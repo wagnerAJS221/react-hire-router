@@ -1,9 +1,7 @@
-import PeopleListItem from "./PeopleListItem";
+import PeopleListItem from './PeopleListItem'
 
 function PeopleList(props) {
-  const { people } = props;
-
-  console.log("people inside peopleList: ", people);
+  const { people } = props
 
   return (
     <ul>
@@ -13,7 +11,7 @@ function PeopleList(props) {
           ))
         : null}
     </ul>
-  );
+  )
 }
 
-export default PeopleList;
+export default PeopleList

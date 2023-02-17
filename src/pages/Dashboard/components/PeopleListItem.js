@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 function PeopleListItem(props) {
-  const { person } = props;
-  // unique id
-  // person.login.username
+  const { person } = props
+
   return (
     <li>
       <h3>
@@ -14,7 +13,7 @@ function PeopleListItem(props) {
       </Link>
       {person.wage && <p>Wage: £{person.wage}</p>}
     </li>
-  );
+  )
 }
 
-export default PeopleListItem;
+export default PeopleListItem
